@@ -1,7 +1,7 @@
 /* eslint no-magic-numbers: 0 */
 import React, { useState } from 'react';
 
-import { LanrzipMaterialComponents } from '../lib';
+import { LanrzipMaterialComponents, MuiButton } from '../lib';
 
 const App = () => {
 
@@ -16,6 +16,11 @@ const App = () => {
                 setProps={setProps}
                 {...state}
             />
+            <MuiButton
+                setProps={setProps}
+                variant='contained'
+            />
+            
         </div>
     )
 };

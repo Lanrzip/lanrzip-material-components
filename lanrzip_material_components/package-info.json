@@ -2,7 +2,7 @@
   "name": "lanrzip_material_components",
   "version": "0.0.1",
   "description": "Material-UI Implementation in Dash",
-"repository": {
+  "repository": {
     "type": "git",
     "url": "git://github.com/Lanrzip/lanrzip-material-components.git"
   },
@@ -24,6 +24,9 @@
   "author": "Lanrzip <lanrzip@163.com>",
   "license": "MIT",
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.18",
     "ramda": "^0.26.1"
   },
   "devDependencies": {
@@ -42,9 +45,9 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-react": "^7.14.2",
     "prop-types": "^15.8.1",
-    "react": "^16.8.6",
+    "react": "^18.3.1",
     "react-docgen": "^5.4.3",
-    "react-dom": "^16.8.6",
+    "react-dom": "^18.3.1",
     "style-loader": "^3.3.3",
     "styled-jsx": "^3.2.1",
     "webpack": "^5.84.1",
