@@ -1,7 +1,7 @@
 /* eslint no-magic-numbers: 0 */
 import React, { useState } from 'react';
 
-import { LanrzipMaterialComponents, MuiButton } from '../lib';
+import { LanrzipMaterialComponents, MuiButton, MuiTextField } from '../lib';
 
 const App = () => {
 
@@ -20,7 +20,9 @@ const App = () => {
                 setProps={setProps}
                 variant='contained'
             />
-            
+            <MuiTextField
+                
+            />
         </div>
     )
 };

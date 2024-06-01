@@ -1,5 +1,5 @@
 import lanrzip_material_components as lmc
-from dash import Dash, callback, html, Input, Output
+from dash import Dash, callback, html, Input, Output, State
 
 app = Dash(__name__)
 
@@ -14,15 +14,25 @@ app.layout = html.Div([
         id='button',
         children='Click me',
         variant='contained',
+        # disabled=True
     ),
-    html.Div(id='output2'),
+    lmc.MuiTextField(
+        id='text-field',
+        value='my-value',
+        label='my-label'
+    ),
+    html.Div(id='test-output'),
 
 ])
 
 
-@callback(Output('output2', 'children'), Input('button', 'nClicks'))
-def display_output2(nClicks):
-    return 'You have entered {}'.format(nClicks)
+@callback(
+    Output('test-output', 'children'),
+    Input('button', 'nClicks'),
+    State('text-field', 'value')
+)
+def display_output2(nClicks, textValue):
+    return f"Button clicked {nClicks} times, text field value: {textValue}"
 
 @callback(Output('output', 'children'), Input('input', 'value'))
 def display_output(value):
